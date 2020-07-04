@@ -1,2 +1,2 @@
-# Blog-Drafts
+# Blog-Posts
 A repository to keep track of my blog posts
