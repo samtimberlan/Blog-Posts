@@ -153,3 +153,5 @@ Build and run the application. Ensure Redis CLI is still running in CMD. Open Po
 Send the request again and this time, the request time should be less than that of the first request. The data in the response should be from the cache. This can be verified by running the command `keys *` in Redis CLI. If your key is in the cache, congrats, you have been able to implement Redis successfully.
 
 There you have it. Thanks for reading.
+
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Distributed%20Caching%20In%20ASP.Net%20Core%203.1%20Using%20Redis.md)

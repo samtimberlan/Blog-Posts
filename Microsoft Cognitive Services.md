@@ -4,3 +4,7 @@ Text Analytics: examines semantics and determines sentiments from text. Provides
 Bing Speech API: is used to work with speech based on languages. Translations could be made and text converted to speech with it.
 
 Language Understanding Intelligence Service (LUIS): this cognitive service identifies user intent in speech. This intent is mapped to entities. This service offers IOTs like Alexa and Siri, the ability to understand commands and trigger appropriate responses. For instance, the words “Turn On the Air Conditioner” would translate to Air Conditioner as the entity and On, the intent. This would turn on the air conditioner.
+
+There you have it. Thanks for reading.
+
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Microsoft%20Cognitive%20Services.md)

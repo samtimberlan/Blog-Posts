@@ -7,3 +7,7 @@
 **Jakob’s Law of Internet User Experience:** “Users spend time on sites other than your site. They prefer your site to work just like other sites.” This law essentially discourages web developers from being too innovative to the extent where users are unable to interact with their products simply because it requires a steep learning curve.
 
 **Occam’s Razor:** “Among competing hypothesis that predicts equally well, the one with the fewest assumptions should be selected”. In design, we strive to keep it simple. Not reaching for complex solutions where simpler ones would not just suffice but be perfect.
+
+There you have it. Thanks for reading.
+
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Essential%20Laws%20Of%20UX%20every%20Web%20Developer%20must%20know.md)
