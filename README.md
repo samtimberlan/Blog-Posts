@@ -1,2 +1,3 @@
 # Blog-Posts
-A repository to keep track of my blog posts
+
+A repository to keep track of my blog posts [here](dev.to/samtimberlan)
