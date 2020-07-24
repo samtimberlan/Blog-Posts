@@ -87,3 +87,7 @@ Among the constraints of a REST architectural style, Uniform Interface is the ce
 - Use a verb or verb phrase for controller names. For example, http://localhost/products/search
 
 - Create, Read, Update, Delete (CRUD) operations should not be used in URLs. For example, you will never see the URL http://localhost/get-cloth/10, because the correct design is to send the URL http://localhost/products/clothes within an HTTP GET request to the server, the HTTP request is a self-descriptive message.
+
+There you have it. Thanks for reading.
+
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Essential%20Laws%20Of%20UX%20every%20Web%20Developer%20must%20know.md)
