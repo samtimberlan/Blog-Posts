@@ -111,7 +111,7 @@ function convertToRomanUnit(num, romArr) {
 }
 ```
 
-You can [view the full source code here](https://github.com/samtimberlan/Roman-Numeral-Converter/archive/master.zip).
+You can [view the full source code here](https://github.com/samtimberlan/Roman-Numeral-Converter/blob/master/ConverToRomanNumeralsJS.js).
 
 There you have it. Thanks for reading.
 
