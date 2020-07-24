@@ -2,19 +2,19 @@
 
 With this article, I will greatly describe REST along with a brief description of an API. Let’s get started.
 
-# What is an API?
+## What is an API?
 
 An API is easily defined as an Application Programming Interface. Yeah yeah, same old tech-y definition. So, what exactly is an API? The easiest way to think of an API is as anything that delivers a service. Imagine you are getting married. As often the case, you’re already weighed down by a lot of responsibilities: providing the best clothes for yourself and the train, ensuring that bills for things such as reception venue, bridal price and the likes are paid. You definitely are not going to be the same person to cook and serve the guests. These could be handled by others willing to render such services.
 
 Similarly, if we are to create a small weather application that forecasts the weather conditions of hundreds of cities round the world, instead of traveling to every single one of those cities, every single day, with instruments for recording weather reports, we could just get the data from those who already have these reports in their libraries, while focusing on creating our app. That makes sense. We could pay them a token from money which otherwise, could have been used to pay for fares.
 
-# What is REST?
+## What is REST?
 
 I have always thought the English word “REST” to mean, as one dictionary defined: “A pause for relaxation”. However, I have realized that not all words containing those four letters R-E-S-T actually mean relaxation or a state of inactivity. Some are almost opposite, as in the case of the word “Restive”.
 
 In our case, REST is an abbreviation for Representational State Transfer. It is a mindset or thought process developers follow when building an API. It is not an API.
 
-# A brief history:
+## A brief history:
 
 REST was brought to birth as a Dissertation or research propounded by Roy Fielding while gaining his Doctorate degree in the year 2000.
 
@@ -22,29 +22,29 @@ At that point in time, the internet was the Rave of the moment. It was just five
 
 Furthermore, with the growth of the internet arose a need for distributed servers, that is, computers in different locations, to communicate. The only available solution was a protocol which required developers to write complex, error-prone, hard-to-debug XML documents. That protocol was the Simple Object Access Protocol (SOAP).
 
-# Constraints of REST
+## Constraints of REST
 
-## Client – Server:
+**Client – Server:**
 
 This is the most basic constraint of REST. It implies that REST can ONLY be implemented on a client – server architecture. This client is usually a browser used to make requests, whereas, the server is the remote computer holding information to be accessed. This constraint of REST enhances separation of concerns and scalability.
 
-## Code On Demand:
+**Code On Demand:**
 
 An optional constraint, signifying the fact that the server can send executable code to be implemented by the client.
 
-## Layered System:
+**Layered System:**
 
 No matter how many systems process a request, the end response should be the same regardless.
 
-## Statelessness:
+**Statelessness:**
 
 The server does not store client-related information in form of sessions.
 
-## Cache-ability:
+**Cache-ability:**
 
 The server should identify which responses are cache-able or non-cache-able. Information that will not easily change over time, should be cached or stored in the browser, so that loading time can be reduced and performance, increased.
 
-## Uniform Interface:
+**Uniform Interface:**
 
 This generally ensures a standard method for communication – HTTP verbs. It is another fundamental constraint that must be implemented for an API to be RESTful. There are four sub constraints included, they are:
 
@@ -68,7 +68,7 @@ This generally ensures a standard method for communication – HTTP verbs. It is
 }
 ```
 
-# URL Design Principles for RESTful Web API
+## URL Design Principles for RESTful Web API
 
 Among the constraints of a REST architectural style, Uniform Interface is the central feature. It doesn’t mean all resources share the same URL, the true meaning is to assign every resource a unique URL, and the design of all URLs follows the same normal form. There are many books written about the rules of RESTful API design if you want to do some research however, here are some rules we will follow:
 
@@ -90,4 +90,4 @@ Among the constraints of a REST architectural style, Uniform Interface is the ce
 
 There you have it. Thanks for reading.
 
-Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Essential%20Laws%20Of%20UX%20every%20Web%20Developer%20must%20know.md)
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/master/REST%20%E2%80%93%20A%20pragmatic%20Approach%20For%20Building%20APIs.md)
