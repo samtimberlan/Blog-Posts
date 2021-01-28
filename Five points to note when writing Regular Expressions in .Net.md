@@ -3,9 +3,10 @@ Though powerful, regular expressions (regex), can cause performance bottlenecks 
 
 1.	Input source: An input source can be reliable or unreliable. They usually contain data that:
  - Matches the pattern
- - Nearly matches the pattern
  - Does not match the pattern
-Unreliable sources will contain more input that nearly matches or does not match a given pattern. Input that nearly matches the regex pattern, typically require more processing time. Depending on the input length, this time could be days, or even years.
+ - Nearly matches the pattern.  
+<br/>Unreliable sources will contain more input that nearly matches or does not match a given pattern. 
+Input that nearly matches the regex pattern, typically require more processing time. Depending on the input length, this time could be days, or even years.
 2.	Always use a timeout: The regex engine in .Net uses an infinite timeout by default when matching. This is meant to be changed according to the developer’s need and the resulting timeout exception handled accordingly. Using a regex timeout secures an app from denial of service.
 3.	Object instantiation: Use static pattern-matching method, such as `Regex.Match(String, String)` instead of instantiating the regex class `new Regex(pattern)` for methods that will be frequently called, as this, will probably use a cached, compiled version
 4.	Assembly Compilation: When developing a regular expression library, you can significantly improve the startup time and execution time by compiling to a library. 
@@ -18,4 +19,4 @@ Additional reading:
 
 There you have it. Thanks for reading.
 
-Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/)
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/master/Five%20points%20to%20note%20when%20using%20Regular%20Expressions.md)
