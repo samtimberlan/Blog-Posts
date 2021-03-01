@@ -243,7 +243,7 @@ Finally, we are ready to setup our controller. It will contain two endpoints; on
         }
 ```
 
-For the full implementation, please [visit this repo]()
+For the full implementation, please [visit this repo](https://github.com/samtimberlan/AWSService)
 
 There you have it. Thanks for reading.
 
