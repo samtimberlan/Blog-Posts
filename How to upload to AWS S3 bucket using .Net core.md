@@ -1,4 +1,4 @@
-This guide assumes you have access to an AWS account with subscription to S3 service and a bucket set up.
+This guide assumes you have access to an AWS account with subscription to S3 service.
 
 1.	Create and setup project
 2.	Add a service
