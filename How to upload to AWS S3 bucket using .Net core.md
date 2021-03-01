@@ -2,22 +2,22 @@ This guide assumes you have access to an AWS account with subscription to S3 ser
 
 1.	Create and setup project
 2.	Add a service
-3.	Creating a bucket
+3.	Create a bucket
 4.	Add security checks
-5.	Uploading a file
-6.	Retrieving the URL for uploaded content
+5.	Upload a file
+6.	Retrieve public URL for uploaded content
 7.  Inject dependencies into startup file
 8.  Add service to controller
 
 Using an IDE of choice, create a new web project. It could be an API or a web app. For this demo, we will be creating an API using .Net 5.0.
 
 ## Create the API project
- Using Visual Studio, or any IDE of your choice, create an API project. Choose .Net 5.0 as the target. Install the following nuget packages: `AWSSDK.S3` and `AWSSDK.Extensions.NETCore.Setup`
+ Using Visual Studio or any IDE of your choice, create an API project. Choose .Net 5.0 as the target. Install the following nuget packages: `AWSSDK.S3` and `AWSSDK.Extensions.NETCore.Setup`
 
  ## Add a service
  Create a folder or class library project (depending on your preference) named Services; this will store our AWS service which will be called by the API controller.
 
- ##	Creating a bucket
+ ##	Create a bucket
  To create a bucket, we will need to [connect to our AWS account with valid credential](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/net-dg-config-netcore.html) using the nuget package AWSSDK.Extensions.NETCore.Setup. The nuget package “AWSSDK.S3” provides helpful classes for interacting with our upstream bucket. These classes will enable us perform actions such as creating and updating a bucket. Now, let us create a method that will create a bucket with a specified bucket name. This method will check if the bucket exists and create it if it doesn’t. Using `AmazonS3Client`, the bucket will be created using a `PutBucketRequest` object, containing the bucket information.
 
  ```
@@ -58,7 +58,7 @@ Using an IDE of choice, create a new web project. It could be an API or a web ap
         }
  ```
 
- ## Adding security checks
+ ## Add security checks
 As is the case with arbitrary file uploads by users, data is untrusted, hence, it must be checked to ensure it is clean and conforms to business requirements. For this demo, we will be requiring users to upload only image files (".jpg", ".jpeg", ".png", “gif”) not more than 6Mb. Furthermore, the file will be saved, not with the original file name, but a random name; the original name will be saved as part of the file meta. This will prevent injection and related malicious attacks. 
 
 ```
@@ -89,7 +89,7 @@ private bool IsValidImageFile(IFormFile file)
         }
 ```
 
-## 	Uploading a file
+## 	Upload a file
 To upload a file, the file must be represented as a `TransferUtilityUploadRequest` object. This object contains several properties, notably:
 -	InputStream: a stream of the file content to be uploaded
 
@@ -176,7 +176,7 @@ public async Task<AWSUploadResult<string>> UploadImageToS3BucketAsync(UploadRequ
         }
 ```
 
-##	Retrieving the URL for uploaded content
+##	Retrieve public URL for uploaded content
 Additionally, we need a way to get a sharable URL which can be saved to a database. AWS has two patterns for constructing S3 file URLs, namely: Path style, which is deprecated and virtual hosted style. For this demo, we will use the virtual hosted style to retrieve the file URL. It follows any of the underlisted patterns
 -	http://[bucketName].[regionName].amazonaws.com/[key]
 -	https://[bucketName].s3.amazonaws.com/[key]
@@ -223,7 +223,7 @@ Next, here is the code to inject dependencies which the service will need:
 
 These should be added to the `ConfigureServices` method.
 
-## Add Services to Controller
+## Add service to controller
 
 Finally, we are ready to setup our controller. It will contain two endpoints; one for creating the bucket and another for uploading contents
 
