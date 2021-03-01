@@ -247,4 +247,4 @@ For the full implementation, please [visit this repo](https://github.com/samtimb
 
 There you have it. Thanks for reading.
 
-Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub]()
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/How%20to%20upload%20to%20AWS%20S3%20bucket%20using%20.Net%20core.md)
