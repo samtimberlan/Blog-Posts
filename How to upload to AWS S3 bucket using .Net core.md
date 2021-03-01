@@ -15,10 +15,10 @@ Using an IDE of choice, create a new web project. It could be an API or a web ap
  Using Visual Studio, or any IDE of your choice, create an API project. Choose .Net 5.0 as the target. Install the following nuget packages: `AWSSDK.S3` and `AWSSDK.Extensions.NETCore.Setup`
 
  ## Add a service
- To create a bucket, we will need to connect to our AWS account with valid credential using the nuget package `AWSSDK.Extensions.NETCore.Setup`. The nuget package `AWSSDK.S3` provides helpful classes for interacting with our upstream bucket. These classes will enable us perform actions such as creating and updating a bucket. Now, let us create a method that will create a bucket with a specified bucket name. This method will check if the bucket exists and create it if it doesn’t. Using, Amazon S3 Client, the bucket will be created using a PutBucketRequest object, containing the bucket information.
+ Create a folder or class library project (depending on your preference) named Services; this will store our AWS service which will be called by the API controller.
 
  ##	Creating a bucket
- To create a bucket, we will need to connect to our AWS account with valid credential using the nuget package AWSSDK.Extensions.NETCore.Setup. The nuget package “AWSSDK.S3” provides helpful classes for interacting with our upstream bucket. These classes will enable us perform actions such as creating and updating a bucket. Now, let us create a method that will create a bucket with a specified bucket name. This method will check if the bucket exists and create it if it doesn’t. Using `AmazonS3Client`, the bucket will be created using a `PutBucketRequest` object, containing the bucket information.
+ To create a bucket, we will need to [connect to our AWS account with valid credential](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/net-dg-config-netcore.html) using the nuget package AWSSDK.Extensions.NETCore.Setup. The nuget package “AWSSDK.S3” provides helpful classes for interacting with our upstream bucket. These classes will enable us perform actions such as creating and updating a bucket. Now, let us create a method that will create a bucket with a specified bucket name. This method will check if the bucket exists and create it if it doesn’t. Using `AmazonS3Client`, the bucket will be created using a `PutBucketRequest` object, containing the bucket information.
 
  ```
  public async Task<bool> CreateBucketAsync(string bucketName)
@@ -242,3 +242,9 @@ Finally, we are ready to setup our controller. It will contain two endpoints; on
             return StatusCode(StatusCodes.Status200OK);
         }
 ```
+
+For the full implementation, please [visit this repo]()
+
+There you have it. Thanks for reading.
+
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub]()
