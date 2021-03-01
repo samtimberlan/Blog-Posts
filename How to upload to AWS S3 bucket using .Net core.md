@@ -17,7 +17,7 @@ Using an IDE of choice, create a new web project. It could be an API or a web ap
  ## Add a service
  Create a folder or class library project (depending on your preference) named Services; this will store our AWS service which will be called by the API controller.
 
- ##	Create a bucket
+ ## Create a bucket
  To create a bucket, we will need to [connect to our AWS account with valid credential](https://docs.aws.amazon.com/sdk-for-net/latest/developer-guide/net-dg-config-netcore.html) using the nuget package AWSSDK.Extensions.NETCore.Setup. The nuget package “AWSSDK.S3” provides helpful classes for interacting with our upstream bucket. These classes will enable us perform actions such as creating and updating a bucket. Now, let us create a method that will create a bucket with a specified bucket name. This method will check if the bucket exists and create it if it doesn’t. Using `AmazonS3Client`, the bucket will be created using a `PutBucketRequest` object, containing the bucket information.
 
  ```
@@ -58,8 +58,10 @@ Using an IDE of choice, create a new web project. It could be an API or a web ap
         }
  ```
 
- ## Add security checks
-As is the case with arbitrary file uploads by users, data is untrusted, hence, it must be checked to ensure it is clean and conforms to business requirements. For this demo, we will be requiring users to upload only image files (".jpg", ".jpeg", ".png", “gif”) not more than 6Mb. Furthermore, the file will be saved, not with the original file name, but a random name; the original name will be saved as part of the file meta. This will prevent injection and related malicious attacks. 
+## Add security checks
+As is the case with arbitrary file uploads by users, data is untrusted, hence, it must be checked to ensure it is clean and conforms to business requirements. For this demo, we will be requiring users to upload only image files (".jpg", ".jpeg", ".png", “gif”) not more than 6Mb. Furthermore, during upload, the file will be saved, not with the original file name, but a random name; the original name will be saved as part of the file meta. This will prevent injection and related malicious attacks. 
+
+Below is the code to certify that uploaded files are images:
 
 ```
 private bool IsValidImageFile(IFormFile file)
@@ -89,7 +91,7 @@ private bool IsValidImageFile(IFormFile file)
         }
 ```
 
-## 	Upload a file
+## Upload a file
 To upload a file, the file must be represented as a `TransferUtilityUploadRequest` object. This object contains several properties, notably:
 -	InputStream: a stream of the file content to be uploaded
 
@@ -176,12 +178,12 @@ public async Task<AWSUploadResult<string>> UploadImageToS3BucketAsync(UploadRequ
         }
 ```
 
-##	Retrieve public URL for uploaded content
+## Retrieve public URL for uploaded content
 Additionally, we need a way to get a sharable URL which can be saved to a database. AWS has two patterns for constructing S3 file URLs, namely: Path style, which is deprecated and virtual hosted style. For this demo, we will use the virtual hosted style to retrieve the file URL. It follows any of the underlisted patterns
 -	http://[bucketName].[regionName].amazonaws.com/[key]
 -	https://[bucketName].s3.amazonaws.com/[key]
 
-The full class for the upload service is shown below:
+This is shown below:
 
 ```
 public AWSUploadResult<string> GenerateAwsFileUrl(string bucketName, string key, bool useRegion = true)
