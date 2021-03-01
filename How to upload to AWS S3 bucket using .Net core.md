@@ -183,7 +183,7 @@ Additionally, we need a way to get a sharable URL which can be saved to a databa
 -	http://[bucketName].[regionName].amazonaws.com/[key]
 -	https://[bucketName].s3.amazonaws.com/[key]
 
-This is shown below:
+The code is shown below:
 
 ```
 public AWSUploadResult<string> GenerateAwsFileUrl(string bucketName, string key, bool useRegion = true)
