@@ -19,4 +19,4 @@ Additional reading:
 
 There you have it. Thanks for reading.
 
-Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Five%20points%20to%20note%20when%20using%20Regular%20Expressions.md)
+Did you spot a typo, an error or want to contribute? [Here's the repo on GitHub](https://github.com/samtimberlan/Blog-Posts/blob/drafts/Five%20points%20to%20note%20when%20writing%20Regular%20Expressions%20in%20.Net.md)
